@@ -21,7 +21,7 @@ flask-apscheduler
 python-jenkins
 flask-login
 mysqlclient
-pandas==0.24.2
+pandas
 jira
 tornado
 ujson
