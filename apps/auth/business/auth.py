@@ -47,7 +47,7 @@ class AuthBusiness(object):
         projectid = UserBusiness.query_project_by_userid(userid)
         if userdetail:
             userdetail[0]['projectid'] = projectid
-            token = cls.jwt_b_encode(userdetail[0]).decode('utf-8')
+            token = cls.jwt_b_encode(userdetail[0])
             data = dict(token=token)
             try:
                 res = User.query.filter(User.id == userid, User.status == User.ACTIVE).first()
