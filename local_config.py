@@ -23,9 +23,9 @@ JOBS = [
     }]
 
 # redis 配置
-REDIS_HOST = 'localhost'
-REDIS_PORT = 32768
-REDIS_PASSWORD = ''
+REDIS_HOST = '127.0.0.1'
+REDIS_PORT = 6379
+REDIS_PASSWORD = 'root1234'
 REDIS_DB = 0
 
 # OSS 配置

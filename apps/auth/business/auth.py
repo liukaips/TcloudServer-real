@@ -92,7 +92,7 @@ class AuthBusiness(object):
             dict(
                 exp=datetime.datetime.now() + datetime.timedelta(seconds=exp)))
         try:
-            token_b = jwt.encode(info, SECRET, algorithm=ALGORITHM)
+            token_b = bytes.decode(jwt.encode(info, SECRET, algorithm=ALGORITHM))
         except Exception:
             raise AuthErrorException()
         return token_b
